@@ -40,11 +40,9 @@ export function listStockStats(stocksStatsData) {
   const summaryList = document.querySelector('.summary-list');
   for (const company in stocksStatsData.stocksStatsData[0]) {
     const { bookValue, profit } = stocksStatsData.stocksStatsData[0][company];
-    console.log(bookValue, profit);
     if (!bookValue) {
       continue;
     }
-    // console.log(company, bookValue, profit);
     const li = document.createElement('li');
     addClass(li, 'summary-item', 'flex');
     const companyNameSpan = document.createElement('span');
@@ -56,6 +54,9 @@ export function listStockStats(stocksStatsData) {
     sharePrice.textContent = '$' + bookValue;
     const shareGrowth = document.createElement('span');
     addClass(shareGrowth, 'share-growth');
+    if (parseFloat(profit.toFixed(2)) <= 0) {
+      addClass(shareGrowth, 'danger');
+    }
     shareGrowth.textContent = profit.toFixed(2) + '%';
     companyNameSpan.append(companyName);
     li.append(companyNameSpan, sharePrice, shareGrowth);
@@ -72,8 +73,6 @@ export function listStockStats(stocksStatsData) {
   }
 }
 export function showStockProfile(company, stocksStatsData, stocksProfileData) {
-  console.log(company, stocksStatsData, stocksProfileData);
-
   const { bookValue, profit } = stocksStatsData.stocksStatsData[0][company];
   const details = stocksProfileData.stocksProfileData[0][company].summary;
   const companyName = document.createElement('span');

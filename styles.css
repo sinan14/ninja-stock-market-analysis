@@ -74,6 +74,7 @@ body {
 .chart-box {
   height: 50rem;
   position: relative;
+  background-color: #030341;
 }
 
 .flex {
@@ -110,6 +111,9 @@ li .company-name {
 .share-growth {
   color: lightgreen;
 }
+.danger {
+  color: red;
+}
 .summary-heading {
   gap: 2rem;
   margin: 2rem 0 3rem;
@@ -124,6 +128,10 @@ li .company-name {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .btn_duration {
   padding: 0.6rem;
