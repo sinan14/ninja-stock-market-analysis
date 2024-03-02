@@ -1,0 +1,140 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  /* This defines what 1rem is */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  /* height: 100vh; */
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: rgb(1, 1, 41);
+  /* background-color: #040827; */
+  color: #fff;
+  /* font-family: Arial, sans-serif; */
+}
+.header h1 {
+  text-align: center;
+  font-size: 3.2rem;
+  margin: 3rem 0 2rem;
+}
+.container {
+  padding: 2rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+.chart-box {
+  height: 50rem;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.summary-list {
+  padding: 0 0 0 6.4rem;
+  font-size: 1.8rem;
+}
+.summary-item {
+  gap: 1.6rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+.summary-item span {
+  flex: 1;
+}
+.company-name {
+  color: #fff;
+}
+li .company-name {
+  background-color: #171777;
+  padding: 2px 0;
+  border-radius: 6px;
+  text-align: center;
+  width: 6rem;
+}
+.share-price {
+  color: #fff;
+}
+.share-growth {
+  color: lightgreen;
+}
+.summary-heading {
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.company-details {
+  font-size: 1.4rem;
+}
+.btn_group-duration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.btn_duration {
+  padding: 0.6rem;
+  border-radius: 0.8rem;
+  background-color: orange;
+  color: white;
+  border: none;
+}
+.btn_duration.active {
+  border: 2px solid red;
+}
+.info-box {
+  margin-top: 3rem;
+}

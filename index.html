@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock market analysis</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Stock market analysis</h1>
+    </header>
+    <div class="container">
+      <div class="grid">
+        <div class="grid-6 chart-box">
+          <canvas id="myChart"></canvas>
+          <div class="btn_group-duration">
+            <button class="btn_duration btn_month-1">1 Month</button>
+            <button class="btn_duration btn_month-3">3 Months</button>
+            <button class="btn_duration btn_year-1">1 Year</button>
+            <button class="btn_duration btn_year-5">5 Year</button>
+          </div>
+        </div>
+        <div class="grid-4 summary-box">
+          <ul class="summary-list">
+            <!-- <li class="summary-item flex">
+              <span class="comapny-name text-uppercase">aapl</span>
+              <span class="share-price">$3.953</span>
+              <span class="share-growth">0.24%</span>
+            </li> -->
+          </ul>
+        </div>
+        <div class="grid-6 info-box">
+          <h2 class="summary-heading flex"></h2>
+          <p class="company-details" id="company-details"></p>
+        </div>
+        <div class="grid-4"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
